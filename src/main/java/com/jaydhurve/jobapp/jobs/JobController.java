@@ -27,6 +27,9 @@ public class JobController {
     @GetMapping("jobs/{id}")
     public Job getJobById(@PathVariable Long id) {
         Job job = jobservice.getJobById(id);
-        return job;
+        if(job != null) {
+            return job;
+        }
+        return new Job(1L, "Test Job", "Test Job", "2000", "2000", "locaton");
     }
 }
