@@ -14,6 +14,8 @@ public class Job {
     private String maxSalary;
     private String location;
 
+
+
     public Job() {
     }
 
